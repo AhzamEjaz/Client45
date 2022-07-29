@@ -1,5 +1,10 @@
+
 *{
     font-family: 'poppins';
+}
+
+html{
+    font-size: 14px;
 }
 /* proper */
 body{
@@ -8,13 +13,14 @@ body{
     background-size: cover;
     background-position: center; 
     background-attachment: fixed;
-    
+    overflow: hidden;
 }
 .form-container{
     background-color: rgba(255, 255, 255, 0.87);
     margin: 5%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
+    max-width: 900px;
     }
 
 .parent-logos-cntr{
@@ -51,7 +57,7 @@ body{
 }
 
 .card-img{
-    max-width: 3.5rem;
+    max-width: 3rem;
 }
 .blueline{
 
@@ -96,10 +102,10 @@ body{
 }
 
 
-.roof-input-cnt{
-}
 #zip-code--input{
     text-align: center;
+    background-color: #b3b3b34d;
+    border: 2px solid #b3b3b3;
 }
 
 #form-2{
@@ -107,17 +113,41 @@ body{
 }
 
 .review-container{
-    max-width: 250px;
+    max-width: 300px;
 }
 
 .news-logo{
-    height: 20px;
+    height: 30px;
     padding: 2px;
     margin: 3px;
-    border-radius: 20px;
 }
 
-
+.companies-txt{
+    margin-top:4.5%;
+}
 .checked{
     color: orange;
 }
+
+@media screen and (min-width: 990px) {
+    .card{
+        min-width: 5rem;
+        min-height: 145px;
+    } 
+
+
+}  
+
+
+@media screen and (max-width: 990px) {
+    .card{
+        max-height: 70px;
+    } 
+    html{
+        font-size: 12px;
+    }
+
+    .parent-logos-cntr{
+        display: none;
+    }
+}  
