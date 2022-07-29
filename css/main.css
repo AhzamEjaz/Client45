@@ -1,0 +1,110 @@
+*{
+    font-family: 'poppins';
+}
+/* proper */
+body{
+    background-image: url("../images/Background/background-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+    
+}
+.form-container{
+    background-color: rgba(255, 255, 255, 0.87);
+    margin: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(50px);
+    }
+
+.parent-logos-cntr{
+    background-color: #fff;
+
+}
+.companies-logo-container{
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+
+/* removing number input arrows */
+ /* Chrome, Safari, Edge, Opera */
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+ 
+ /* Firefox */
+ input[type=number] {
+   -moz-appearance: textfield;
+ }
+
+/* noised */
+.crimson-txt{
+    font-weight: 600;
+}
+
+.blueline{
+
+    height: 5px;
+    width: 20%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    background-color: #136EFA;
+    border-radius: 5px;
+}
+
+.card{
+    cursor: pointer;
+}
+
+.card:hover{
+    filter: drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.5));
+}
+
+.selected{
+    color: #136EFA;
+}
+
+.btn{
+    background-color: #136EFA;
+    color: #fff;
+    filter: drop-shadow(2px 3px 3px #136EFA);
+}
+
+
+.btn:hover{
+    background-color: #fff;
+    color: #136EFA;
+    filter: drop-shadow(1px 2px 2px #136EFA);
+}
+
+
+.roof-input-cnt{
+    min-height: 50px;
+}
+#zip-code--input{
+    max-width: 120px;
+    text-align: center;
+}
+
+#form-2{
+    display: none;
+}
+
+.review-container{
+    max-width: 250px;
+}
+
+.news-logo{
+    height: 20px;
+    padding: 2px;
+    margin: 3px;
+    border-radius: 20px;
+}
+
+
+.checked{
+    color: orange;
+}

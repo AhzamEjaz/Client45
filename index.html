@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- local stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div>
+
+      <form class="form-container mt-3 my-auto align-items-center">
+
+        <div class="parent-logos-cntr">
+          <div class="companies-logo-container mx-auto d-flex justify-content-around row">
+            <p class="companies-txt mt-2  col-5">As Seen On</p>
+            <div class="logos-container mt-2 col-4 d-flex justify-content-center">
+              <img class="news-logo" src="./images/icons/cbs.png" alt="">
+              <img class="news-logo" src="./images/icons/USA-today.png" alt="">
+              <img class="news-logo" src="./images/icons/fox-news.png" alt="">
+              <img class="news-logo" src="./images/icons/nbc.png" alt="">
+            </div>
+          </div>
+        </div>
+  
+
+        <div id="forms-container">
+          <div id="form-1" class="mt-4 container form-group">
+            <div class="topheading mt-2 mb-2">
+              <h1 class="crimson-txt text-center">24/7 Instant Pricing</h1>
+              <div class="blueline"></div>
+            </div>
+  
+            <div class="headings-div text-center">
+              <p>
+                This quote us an estimate, the actual price may differ after
+                at-home inspection
+              </p>
+              <h4>Estimate:$500-$3400</h4>
+            </div>
+  
+            <div class="tabs mt-4">
+              <h5 class="text-center">I am looking for:</h5>
+  
+              <div class="row mt-4 d-flex justify-content-center">
+                <!-- card-1 -->
+                <div class="ind_card col-lg-3 mt-3">
+                  <div class="card card-body">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="text-center roof-input-cnt">
+                          <h6 class="mt-3">Repair Roof</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card-2 -->
+                <div class="col-lg-3 mt-3">
+                  <div class="card card-body">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="text-center roof-input-cnt">
+                          <h6 class="mt-3">Replace Roof</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card-3 -->
+                <div class="col-lg-3 mt-3">
+                  <div class="card card-body">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="text-center roof-input-cnt">
+                          <h6 class="mt-3">Install new roof (New Construction)</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="text-center mt-5">
+                <div class="row">
+                  <div class="text-center mt-2 d-flex justify-content-center">
+                    <input
+                      minlength="5"
+                      type="number"
+                      id="zip-code--input"
+                      class="form-control"
+                      placeholder="ZIP"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="text-center mt-3">
+              <button class="btn" onclick="moveToNext(1)">Show Pricing</button>
+            </div>
+  
+  
+          </div>
+          <div id="form-2" class="mt-2 container form-group visible">
+            <div class="row text-center mt-5 d-flex justify-content-center">
+              <div class="col-lg-4 form-group mx-3 mt-2">
+                <label for="first_name">First Name</label>
+                <input
+                  type="email"
+                  id="first_name"
+                  class="form-control"
+                  placeholder="Enter your First Name"
+                  required
+                />
+              </div>
+              <div class="col-lg-4 form-group mx-3 mt-2">
+                <label for="last_name">Last Name</label>
+                <input
+                  type="email"
+                  id="last_name"
+                  class="form-control"
+                  placeholder="Enter last email"
+                  required
+                />
+              </div>
+              <div class="col-lg-4 form-group mx-3  mt-2">
+                <label for="phone_number">Phone number</label>
+                <input
+                  type="number"
+                  id="phone_number"
+                  class="form-control"
+                  placeholder="Enter mobile number"
+                  required
+                />
+              </div>
+              <div class="col-lg-4 form-group mx-3 mt-2">
+                <label for="email_address">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email_address"
+                  placeholder="Enter email address"
+                  required
+                />
+              </div>
+              <div class="buttons col-lg-6 mx-3 mt-5">
+                <button onclick="moveToPrevious(2)" id="back-btn" type="button" class="col-lg-3 btn btn-primary m-3 mt-3">
+                  Back
+                </button>
+  
+                <button id="next-btn" type="submit" class="col-lg-3 btn btn-primary m-3 mt-3">
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-container mt-2 mx-auto d-flex justify-content-evenly">
+          <p id="review">5.0</p>
+          <div class="review-stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <p>Google Reviews</p>
+        </div>
+      </form>
+    </div>
+    <script src="./js/bootstrap.bundle.js"></script>
+
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>
