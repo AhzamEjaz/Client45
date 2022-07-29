@@ -24,7 +24,7 @@
   <body>
     <div>
 
-      <form class="form-container mt-3 my-auto align-items-center">
+      <form class="form-container mt-2 align-items-center">
 
         <div class="parent-logos-cntr">
           <div class="companies-logo-container mx-auto d-flex justify-content-around row">
@@ -40,8 +40,8 @@
   
 
         <div id="forms-container">
-          <div id="form-1" class="mt-4 container form-group">
-            <div class="topheading mt-2 mb-2">
+          <div id="form-1" class="mt-2 container form-group">
+            <div class="topheading mt-2">
               <h1 class="crimson-txt text-center">24/7 Instant Pricing</h1>
               <div class="blueline"></div>
             </div>
@@ -54,41 +54,56 @@
               <h4>Estimate:$500-$3400</h4>
             </div>
   
-            <div class="tabs mt-4">
+            <div class="tabs mt-2">
               <h5 class="text-center">I am looking for:</h5>
   
-              <div class="row mt-4 d-flex justify-content-center">
+              <div class="row mt-2 d-flex justify-content-center">
                 <!-- card-1 -->
-                <div class="ind_card col-lg-3 mt-3">
-                  <div class="card card-body">
+                <div onclick="onCardClick(0)" class="col-lg-3 mt-2">
+                  <div id="replace-card" class="card card-body">
                     <div class="row">
-                      <div class="col-lg-12">
-                        <div class="text-center roof-input-cnt">
-                          <h6 class="mt-3">Repair Roof</h6>
+                      <div class="col-lg-12 col-4">
+                        <div class="text-center ">
+                          <img class="card-img" src="./images/icons/replace.png" alt="">
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-4">
+                        <div class="text-center ">
+                          <h6 class="mt-2">Replace roof</h6>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- card-2 -->
-                <div class="col-lg-3 mt-3">
-                  <div class="card card-body">
+                <div onclick="onCardClick(1)" class="col-lg-3 mt-2">
+                  <div id="repair-card" class="card card-body">
                     <div class="row">
-                      <div class="col-lg-12">
-                        <div class="text-center roof-input-cnt">
-                          <h6 class="mt-3">Replace Roof</h6>
+                      <div class="col-lg-12 col-4">
+                        <div class="text-center ">
+                          <img class="card-img" src="./images/icons/repair.png" alt="">
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-4">
+                        <div class="text-center ">
+                          <h6 class="mt-2">Repair roof</h6>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- card-3 -->
-                <div class="col-lg-3 mt-3">
-                  <div class="card card-body">
+                <div onclick="onCardClick(2)" class="col-lg-3 mt-2">
+                  <div id="construct-card" class="card card-body">
                     <div class="row">
-                      <div class="col-lg-12">
-                        <div class="text-center roof-input-cnt">
-                          <h6 class="mt-3">Install new roof (New Construction)</h6>
+                      <div class="col-lg-12 col-4">
+                        <div class="text-center ">
+                          <img class="card-img" src="./images/icons/construct.png" alt="">
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-4">
+                        <div class="text-center ">
+                          <h6 class="mt-2">Install new roof</h6>
                         </div>
                       </div>
                     </div>
@@ -96,7 +111,7 @@
                 </div>
               </div>
   
-              <div class="text-center mt-5">
+              <div class="text-center mt-2">
                 <div class="row">
                   <div class="text-center mt-2 d-flex justify-content-center">
                     <input
@@ -111,14 +126,14 @@
               </div>
             </div>
   
-            <div class="text-center mt-3">
+            <div class="text-center mt-2">
               <button class="btn" onclick="moveToNext(1)">Show Pricing</button>
             </div>
   
   
           </div>
-          <div id="form-2" class="mt-2 container form-group visible">
-            <div class="row text-center mt-5 d-flex justify-content-center">
+          <div id="form-2" class="mt-2 container form-group">
+            <div class="row text-center mt-2 d-flex justify-content-center">
               <div class="col-lg-4 form-group mx-3 mt-2">
                 <label for="first_name">First Name</label>
                 <input
@@ -159,12 +174,12 @@
                   required
                 />
               </div>
-              <div class="buttons col-lg-6 mx-3 mt-5">
-                <button onclick="moveToPrevious(2)" id="back-btn" type="button" class="col-lg-3 btn btn-primary m-3 mt-3">
+              <div class="buttons col-lg-6 mx-3 mt-2">
+                <button onclick="moveToPrevious(2)" id="back-btn" type="button" class="col-lg-3 btn btn-primary m-3 mt-2">
                   Back
                 </button>
   
-                <button id="next-btn" type="submit" class="col-lg-3 btn btn-primary m-3 mt-3">
+                <button id="next-btn" type="submit" class="col-lg-3 btn btn-primary m-3 mt-2">
                   Next
                 </button>
               </div>
@@ -186,8 +201,6 @@
       </form>
     </div>
     <script src="./js/bootstrap.bundle.js"></script>
-
     <script src="./js/main.js"></script>
-
   </body>
 </html>
