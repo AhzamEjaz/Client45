@@ -17,20 +17,51 @@ function checkZipSize(event) {
   }
 }
 
-
 function moveToNext(current_form_number) {
+  if (current_form_number == 1) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    turnOnForm("form-2");
+    hidePercentBar();
+  } 
+  else if (current_form_number == 2) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-3");
 
-  form_number_to_turn_on = "form-" + (current_form_number+1).toString() ;
-  turnOffForm();
-  unhidePercentBar()
-
-  turnOnForm(form_number_to_turn_on);
-  if(current_form_number == 0 || current_form_number == 1){
-  hidePercentBar();
   }
+  else if (current_form_number == 3) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-4");
+  }
+  else if (current_form_number == 4) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-5");
 
-  setPercentBar(current_form_number)
+  }
+  else if (current_form_number == 5) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-6");
 
+  }
+  else if (current_form_number == 6) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-7");
+
+  }
+  else if (current_form_number == 7) {
+    turnOffForm();
+
+  }
 }
 function setPercentBar(current_form_num){
   percentage = ((current_form_num)/forms_ids.length) * 100 ;
