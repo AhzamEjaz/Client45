@@ -7,12 +7,18 @@
     <title>Document</title>
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Work+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- bootstrap -->
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.css" />
     <!-- local stylesheet -->
     <link
       rel="stylesheet"
@@ -23,51 +29,67 @@
   </head>
   <body>
     <div class="main-container row">
-
-      <form class="form-container col-md-6 col-11 mx-auto mt-2 align-items-center">
-
+      <form
+        class="form-container col-md-6 col-11 mx-auto mt-2 align-items-center"
+      >
         <div class="parent-logos-cntr">
-          <div class="companies-logo-container mx-auto d-flex justify-content-around row">
-            <p class="companies-txt  col-5">As Seen On</p>
-            <div class="logos-container mt-2 col-4 d-flex justify-content-center">
-              <img class="news-logo" src="./images/icons/cbs.png" alt="">
-              <img class="news-logo" src="./images/icons/USA-today.png" alt="">
-              <img class="news-logo" src="./images/icons/fox-news.png" alt="">
-              <img class="news-logo" src="./images/icons/nbc.png" alt="">
+          <div
+            class="companies-logo-container mx-auto d-flex justify-content-around row"
+          >
+            <p class="companies-txt col-5">As Seen On</p>
+            <div
+              class="logos-container mt-2 col-4 d-flex justify-content-center"
+            >
+              <img class="news-logo" src="./images/icons/cbs.png" alt="" />
+              <img
+                class="news-logo"
+                src="./images/icons/USA-today.png"
+                alt=""
+              />
+              <img class="news-logo" src="./images/icons/fox-news.png" alt="" />
+              <img class="news-logo" src="./images/icons/nbc.png" alt="" />
             </div>
           </div>
         </div>
-  
-
+        <div id="completion-bar" class="completion-bar shadow mt-2 col-12">
+          <div id="percent-complete" class="percent-complete text-center"></div>
+        </div>
         <div id="forms-container">
           <div id="form-1" class="mt-2 container form-group">
             <div class="topheading mt-2">
               <h1 class="crimson-txt text-center">24/7 Instant Pricing</h1>
               <div class="blueline"></div>
             </div>
-  
-            <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-              <p class="text-center" style="text-align: justify;">
-                This quote us an estimate, the actual price may differ after at-home inspection
+
+            <div
+              class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2"
+            >
+              <p class="text-center" style="text-align: justify">
+                This quote us an estimate, the actual price may differ after
+                at-home inspection
               </p>
               <h4>Estimate:$500-$3400</h4>
             </div>
-  
+
             <div class="tabs mt-2">
               <h5 class="text-center">I am looking for:</h5>
-  
+
               <div class="row mt-2 d-flex justify-content-center">
                 <!-- card-1 -->
                 <div onclick="onCardClick(0)" class="col-lg-3 mt-2">
                   <div id="replace-card" class="card card-body">
                     <div class="row">
                       <div class="col-lg-12 col-4">
-                        <div class="text-center ">
-                          <img class="card-img" src="./images/icons/replace.png" alt="">
+                        <div class="text-center">
+                          <img
+                            class="card-img"
+                            src="./images/icons/replace.png"
+                            alt=""
+                          />
                         </div>
                       </div>
                       <div class="card-txt-div col-lg-12 col-7">
-                        <div class="text-center ">
+                        <div class="text-center">
                           <h6 class="mt-2">Replace roof</h6>
                         </div>
                       </div>
@@ -79,12 +101,16 @@
                   <div id="repair-card" class="card card-body">
                     <div class="row">
                       <div class="col-lg-12 col-4">
-                        <div class="text-center ">
-                          <img class="card-img" src="./images/icons/repair.png" alt="">
+                        <div class="text-center">
+                          <img
+                            class="card-img"
+                            src="./images/icons/repair.png"
+                            alt=""
+                          />
                         </div>
                       </div>
                       <div class="card-txt-div col-lg-12 col-7">
-                        <div class="text-center ">
+                        <div class="text-center">
                           <h6 class="mt-2">Repair roof</h6>
                         </div>
                       </div>
@@ -96,12 +122,16 @@
                   <div id="construct-card" class="card card-body">
                     <div class="row">
                       <div class="col-lg-12 col-4">
-                        <div class="text-center ">
-                          <img class="card-img" src="./images/icons/construct.png" alt="">
+                        <div class="text-center">
+                          <img
+                            class="card-img"
+                            src="./images/icons/construct.png"
+                            alt=""
+                          />
                         </div>
                       </div>
                       <div class="card-txt-div col-lg-12 col-7">
-                        <div class="text-center ">
+                        <div class="text-center">
                           <h6 class="mt-2">Install new roof</h6>
                         </div>
                       </div>
@@ -109,10 +139,12 @@
                   </div>
                 </div>
               </div>
-  
+
               <div class="text-center mt-2">
                 <div class="row">
-                  <div class="text-center col-sm-12 col-md-5  mx-auto mt-2 d-flex justify-content-center">
+                  <div
+                    class="text-center col-sm-12 col-md-5 mx-auto mt-2 d-flex justify-content-center"
+                  >
                     <input
                       minlength="5"
                       type="number"
@@ -124,12 +156,17 @@
                 </div>
               </div>
             </div>
-  
+
             <div class="text-center mt-2">
-              <button id="zip-submit" class="btn" onclick="moveToNext(1)" disabled>Show Pricing</button>
+              <button
+                id="zip-submit"
+                class="btn"
+                onclick="moveToNext(1)"
+                disabled
+              >
+                Show Pricing
+              </button>
             </div>
-  
-  
           </div>
           <div id="form-2" class="mt-2 container form-group">
             <div class="row text-center mt-2 d-flex justify-content-center">
@@ -142,7 +179,7 @@
                   required
                 />
               </div>
-              <div class="col-lg-12 form-group mx-3  mt-3">
+              <div class="col-lg-12 form-group mx-3 mt-3">
                 <input
                   type="number"
                   id="phone_number"
@@ -161,19 +198,404 @@
                 />
               </div>
               <div class="buttons col-lg-6 mx-3 mt-2">
-                <button onclick="moveToPrevious(2)" id="back-btn" type="button" class="col-lg-3 btn btn-primary m-3 mt-2">
+                <button
+                  onclick="moveToPrevious(2)"
+                  id="back-btn"
+                  type="button"
+                  class="col-lg-3 btn btn-primary m-3 mt-2"
+                >
                   Back
                 </button>
-  
-                <button id="next-btn" type="submit" class="col-lg-3 btn btn-primary m-3 mt-2">
+
+                <button
+                  onclick="moveToNext(2)"
+                  id="next-btn"
+                  type="submit"
+                  class="col-lg-3 btn btn-primary m-3 mt-2"
+                >
                   Next
                 </button>
               </div>
             </div>
           </div>
+          <div id="form-3" class="mt-2 container form-group">
+            <div class="col-12 text-center">
+              <h2 class="name-head col-12">Stephan Craven</h2>
+              <p class="col-12 m-0">+0123456789</p>
+              <p class="col-12">stph@example.com</p>
+              <div class="blueline mb-0"></div>
+              <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
+            </div>
+
+            <div class="row text-center mt-3">
+              <p class="col-12">Hello Stephan, your average replace cost is</p>
+              <div class="col-4 card p-3 text-center mx-auto">
+                <h4>$1.48 - 5.12</h4>
+                <p id="pricing">per Sq. ft</p>
+              </div>
+              <p class="col-12 mt-2">For more accurate estimate you can</p>
+              <div class="row">
+                <!-- card-1 -->
+                <div onclick="onCardClick(3)" class="col-lg-6 mt-2">
+                  <div id="cunsultant" class="scr-3-card card card-body">
+                    <div class="row">
+                      <div class="col-lg-12 col-4">
+                        <div class="text-center">
+                          <img
+                            class="card-img"
+                            src="./images/icons/consult.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="card-txt-div col-lg-12 col-7">
+                        <div class="text-center">
+                          <p class="mt-2">Schedule Consultation</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card-2 -->
+                <div onclick="onCardClick(4); moveToNext(3);" class="col-lg-6 mt-2">
+                  <div id="instant-quote" class="scr-3-card card card-body">
+                    <div class="row">
+                      <div class="col-lg-12 col-4">
+                        <div class="text-center">
+                          <img
+                            class="card-img"
+                            src="./images/icons/instant.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="card-txt-div col-lg-12 col-7">
+                        <div class="text-center">
+                          <p class="mt-2 m-0">Get an instant online quote</p>
+                          <p class="date-div m-0">(15 question, 2 minutes)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button
+                onclick="moveToPrevious(3)"
+                id="back-btn"
+                type="button"
+                class="col-4 col-lg-2 btn btn-primary mt-3"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+          <div id="form-4" class="mt-2 container form-group">
+            <div class="col-12 text-center">
+              <h2 class="name-head col-12">Stephan Craven</h2>
+              <p class="col-12 m-0">+0123456789</p>
+              <p class="col-12">stph@example.com</p>
+              <div class="blueline mb-0"></div>
+              <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
+            </div>
+            <p class="col-12 mt-2">Is this an Emergency</p>
+            <div class="row">
+              <!-- card-1 -->
+              <div onclick="onCardClick(5); moveToNext(4);" class="col-lg-6 mt-2">
+                <div id="yes-1" class="scr-3-card card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/yes.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-2">Yes</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card-2 -->
+              <div onclick="onCardClick(6); moveToNext(4);" class="col-lg-6 mt-2">
+                <div id="no-1" class="scr-3-card card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/no.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-2 m-0">No</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="col-12">
+              <button
+                onclick="moveToPrevious(4)"
+                id="back-btn"
+                type="button"
+                class="col-4 col-lg-2 btn btn-primary mt-3"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+          <div id="form-5" class="mt-2 container form-group">
+            <div class="col-12 text-center">
+              <h2 class="name-head col-12">Stephan Craven</h2>
+              <p class="col-12 m-0">+0123456789</p>
+              <p class="col-12">stph@example.com</p>
+              <div class="blueline mb-0"></div>
+              <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
+            </div>
+            <p class="col-12 mt-2">Is this request covered by an insurance claim?</p>
+            <div class="row">
+              <!-- card-1 -->
+              <div onclick="onCardClick(7); moveToNext(5);" class="col-lg-6 mt-2">
+                <div id="yes-2" class="scr-3-card card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/yes.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-2">Yes</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card-2 -->
+              <div onclick="onCardClick(8); moveToNext(5);" class="col-lg-6 mt-2">
+                <div id="no-2" class="scr-3-card card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/no.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-2 m-0">No</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button
+                onclick="moveToPrevious(5)"
+                id="back-btn"
+                type="button"
+                class="col-4 col-lg-2 btn btn-primary mt-3"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+          <div id="form-6" class="mt-2 container form-group">
+            <div class="col-12 text-center">
+              <h2 class="name-head col-12">Stephan Craven</h2>
+              <p class="col-12 m-0">+0123456789</p>
+              <p class="col-12">stph@example.com</p>
+              <div class="blueline mb-0"></div>
+              <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
+            </div>
+            <p class="col-12 mt-2">I know the size of my roof:</p>
+            <div class="row">
+              <!-- card-1 -->
+              <div onclick="onCardClick(9); moveToNext(6);" class="col-lg-6 mt-2">
+                <div id="yes-3" class="scr-3-card card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/yes.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-2">Yes</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card-2 -->
+              <div onclick="onCardClick(10); moveToNext(6);" class="col-lg-6 mt-2">
+                <div id="no-3" class="scr-3-card card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/no.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-2 m-0">No</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button
+                onclick="moveToPrevious(6)"
+                id="back-btn"
+                type="button"
+                class="col-4 col-lg-2 btn btn-primary mt-3"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+          <div id="form-7" class="mt-2 container form-group">
+            <div class="col-12 text-center">
+              <h2 class="name-head col-12">Stephan Craven</h2>
+              <p class="col-12 m-0">+0123456789</p>
+              <p class="col-12">stph@example.com</p>
+              <div class="blueline mb-0"></div>
+              <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
+            </div>
+            <p class="col-12 mt-2">For more accurate estimate you can</p>
+            <div class="row">
+              <!-- card-1 -->
+              <div onclick="onCardClick(3)" class="col-lg-3 mt-2">
+                <div id="cunsultant" class="roof-sizing card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/size-roof.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-1 m-0">&lt; 1,000 Sq. Ft</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card-2 -->
+              <div onclick="onCardClick(4);" class="col-lg-3 mt-2">
+                <div id="instant-quote" class="roof-sizing card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/size-roof.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-1 m-0">1,000-2,000 Sq. Ft.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card-3 -->
+              <div onclick="onCardClick(3)" class="col-lg-3 mt-2">
+                <div id="cunsultant" class="roof-sizing card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/size-roof.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-1 m-0">2,000-3,000 Sq. Ft</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card-4 -->
+              <div onclick="onCardClick(4);" class="col-lg-3 mt-2">
+                <div id="instant-quote" class="roof-sizing card card-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-4">
+                      <div class="text-center">
+                        <img
+                          class="card-img"
+                          src="./images/icons/size-roof.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center">
+                        <p class="mt-1 m-0">3,000+ Sq. Ft.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-12">
+              <button
+                onclick="moveToPrevious(7)"
+                id="back-btn"
+                type="button"
+                class="col-4 col-lg-2 btn btn-primary mt-3"
+              >
+                Back
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="review-container mt-2 mx-auto d-flex justify-content-evenly">
+        <div
+          class="review-container mt-2 mx-auto d-flex justify-content-evenly"
+        >
           <p id="review">5.0</p>
           <div class="review-stars">
             <span class="fa fa-star checked"></span>
