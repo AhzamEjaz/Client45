@@ -104,9 +104,14 @@ body{
 
 #zip-code--input{
     text-align: center;
-    background-color: #b3b3b34d;
     border: 2px solid #b3b3b3;
 }
+
+.shadow {
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+ }
 
 #form-2{
     display: none;

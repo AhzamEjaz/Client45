@@ -1,7 +1,23 @@
 forms_ids = document.getElementById("forms-container").children
 card_click_select = [0, 0, 0]
 
+zip_input = document.getElementById('zip-code--input')
+zip_input.addEventListener('keyup', function(event){
+  checkZipSize(event)
+});
+
 console.log(forms_ids);
+
+function checkZipSize(event){
+  if(zip_input.value.length >= 5){
+    document.getElementById('zip-submit').disabled = false;
+  }
+  else if(zip_input.value.length < 5){
+    document.getElementById('zip-submit').disabled = true;
+  }
+
+}
+
 function moveToNext(current_form_number){
     if(current_form_number == 1){
         turnOffForm('form-1')
@@ -32,7 +48,6 @@ function turnOnForm(form_id){
 
 
 function onCardClick(card_number) {
-  console.log(card_number);
   if(card_number==0){
     
     document.getElementById("replace-card").classList.add("selected-card")
