@@ -60,7 +60,19 @@ function moveToNext(current_form_number) {
   }
   else if (current_form_number == 7) {
     turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-8");
 
+  }
+  else if (current_form_number == 8) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-9");
+  }
+  else if (current_form_number == 9) {
+    // under development
   }
 }
 function setPercentBar(current_form_num){
@@ -156,6 +168,119 @@ function onCardClick(card_number) {
     document.getElementById("no-3").classList.add("selected-card");
 
     document.getElementById("yes-3").classList.remove("selected-card");
+  }
+
+  // estimation cards
+  else if(card_number == 11){
+    document.getElementById("est-1").classList.add("selected-card");
+
+    document.getElementById("est-2").classList.remove("selected-card");
+    document.getElementById("est-3").classList.remove("selected-card");
+    document.getElementById("est-4").classList.remove("selected-card");
+
+  }
+  else if(card_number == 12){
+    document.getElementById("est-2").classList.add("selected-card");
+
+    document.getElementById("est-1").classList.remove("selected-card");
+    document.getElementById("est-3").classList.remove("selected-card");
+    document.getElementById("est-4").classList.remove("selected-card");
+
+  }
+  else if(card_number == 13){
+    document.getElementById("est-3").classList.add("selected-card");
+
+    document.getElementById("est-2").classList.remove("selected-card");
+    document.getElementById("est-1").classList.remove("selected-card");
+    document.getElementById("est-4").classList.remove("selected-card");
+
+  }
+  else if(card_number == 14){
+    document.getElementById("est-4").classList.add("selected-card");
+
+    document.getElementById("est-2").classList.remove("selected-card");
+    document.getElementById("est-3").classList.remove("selected-card");
+    document.getElementById("est-1").classList.remove("selected-card");
+
+  }
+
+  // materials cards
+  else if(card_number == 15){
+    document.getElementById("mat-card-1").classList.add("selected-card");
+
+    document.getElementById("mat-card-2").classList.remove("selected-card");
+    document.getElementById("mat-card-3").classList.remove("selected-card");
+    document.getElementById("mat-card-4").classList.remove("selected-card");
+    document.getElementById("mat-card-5").classList.remove("selected-card");
+    document.getElementById("mat-card-6").classList.remove("selected-card");
+    document.getElementById("mat-card-7").classList.remove("selected-card");
+
+  }
+  else if(card_number == 16){
+    document.getElementById("mat-card-2").classList.add("selected-card");
+
+    document.getElementById("mat-card-1").classList.remove("selected-card");
+    document.getElementById("mat-card-3").classList.remove("selected-card");
+    document.getElementById("mat-card-4").classList.remove("selected-card");
+    document.getElementById("mat-card-5").classList.remove("selected-card");
+    document.getElementById("mat-card-6").classList.remove("selected-card");
+    document.getElementById("mat-card-7").classList.remove("selected-card");
+
+  }
+  else if(card_number == 17){
+    document.getElementById("mat-card-3").classList.add("selected-card");
+
+    document.getElementById("mat-card-2").classList.remove("selected-card");
+    document.getElementById("mat-card-1").classList.remove("selected-card");
+    document.getElementById("mat-card-4").classList.remove("selected-card");
+    document.getElementById("mat-card-5").classList.remove("selected-card");
+    document.getElementById("mat-card-6").classList.remove("selected-card");
+    document.getElementById("mat-card-7").classList.remove("selected-card");
+
+  }
+  else if(card_number == 18){
+    document.getElementById("mat-card-4").classList.add("selected-card");
+
+    document.getElementById("mat-card-2").classList.remove("selected-card");
+    document.getElementById("mat-card-3").classList.remove("selected-card");
+    document.getElementById("mat-card-1").classList.remove("selected-card");
+    document.getElementById("mat-card-5").classList.remove("selected-card");
+    document.getElementById("mat-card-6").classList.remove("selected-card");
+    document.getElementById("mat-card-7").classList.remove("selected-card");
+
+  }
+  else if(card_number == 19){
+    document.getElementById("mat-card-5").classList.add("selected-card");
+
+    document.getElementById("mat-card-2").classList.remove("selected-card");
+    document.getElementById("mat-card-3").classList.remove("selected-card");
+    document.getElementById("mat-card-4").classList.remove("selected-card");
+    document.getElementById("mat-card-1").classList.remove("selected-card");
+    document.getElementById("mat-card-6").classList.remove("selected-card");
+    document.getElementById("mat-card-7").classList.remove("selected-card");
+
+  }
+  else if(card_number == 20){
+    document.getElementById("mat-card-6").classList.add("selected-card");
+
+    document.getElementById("mat-card-2").classList.remove("selected-card");
+    document.getElementById("mat-card-3").classList.remove("selected-card");
+    document.getElementById("mat-card-4").classList.remove("selected-card");
+    document.getElementById("mat-card-5").classList.remove("selected-card");
+    document.getElementById("mat-card-1").classList.remove("selected-card");
+    document.getElementById("mat-card-7").classList.remove("selected-card");
+
+  }
+  else if(card_number == 21){
+    document.getElementById("mat-card-7").classList.add("selected-card");
+
+    document.getElementById("mat-card-2").classList.remove("selected-card");
+    document.getElementById("mat-card-3").classList.remove("selected-card");
+    document.getElementById("mat-card-4").classList.remove("selected-card");
+    document.getElementById("mat-card-5").classList.remove("selected-card");
+    document.getElementById("mat-card-6").classList.remove("selected-card");
+    document.getElementById("mat-card-1").classList.remove("selected-card");
+
   }
 
 }

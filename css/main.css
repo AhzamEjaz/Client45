@@ -118,7 +118,9 @@ body{
 #form-4,
 #form-5,
 #form-6,
-#form-7{
+#form-7,
+#form-8,
+#form-9{
     display: none;
 }
 
@@ -142,16 +144,6 @@ body{
 @media screen and (min-width: 990px) {
     .card-txt-div {
         min-width: 5rem;
-        min-height: 52px;
-
-    } 
-
-}  
-
-@media screen and (min-width: 1280px) {
-    .card-txt-div {
-        min-width: 5rem;
-        margin-bottom: -2rem;
     } 
     .scr-3-card{
         min-height: 120px;
@@ -160,12 +152,26 @@ body{
         min-height:115px;
     }
 
+}  
+
+@media screen and (min-width: 1240px) {
+    .card-txt-div {
+        min-width: 5rem;
+    } 
+    .scr-3-card{
+        min-height: 120px;
+    }
+    .roof-sizing {
+        min-height:120px;
+    }
+
 
 }  
 
 @media screen and (max-width: 990px) {
     .card-txt-div {
         max-height: 70px;
+        font-size: 12px;
     } 
     html{
         font-size: 12px;
@@ -195,4 +201,15 @@ body{
     background-color: #136EFA;
     height: 100%;
 }
-
+.card-txt-div{
+    margin-bottom: 2%;
+}
+.materials{
+    font-size: 12px;
+}
+.material-img-div{
+    background-image: url('../images/icons/dummy_tiles.jpg');
+    /* background-color: #136EFA; */
+    height: 100%;
+    min-height: 50px;
+} 
