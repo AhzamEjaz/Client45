@@ -95,6 +95,18 @@ function moveToNext(current_form_number) {
     unhidePercentBar()
     turnOnForm("form-13");
   }
+  else if (current_form_number == 13) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-14");
+  }
+  else if (current_form_number == 14) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-15");
+  }
 
 }
 function setPercentBar(current_form_num){
@@ -390,6 +402,37 @@ function onCardClick(card_number) {
     document.getElementById("complete-3").classList.remove("selected-card");
     document.getElementById("complete--3").classList.remove("selected-card");
     document.getElementById("complete-not-sure").classList.add("selected-card");
+  }
+
+  // ownerhsip
+  else if (card_number == 37) {
+    document.getElementById("yes-5").classList.add("selected-card");
+
+    document.getElementById("no-5").classList.remove("selected-card");
+  } else if (card_number == 38) {
+    document.getElementById("no-5").classList.add("selected-card");
+
+    document.getElementById("yes-5").classList.remove("selected-card");
+  }
+
+  // status
+  else if (card_number == 39) {
+    document.getElementById("status-hire").classList.add("selected-card");
+    document.getElementById("status-plane").classList.remove("selected-card");
+    document.getElementById("status-not-sure").classList.remove("selected-card");
+    
+  }
+  else if (card_number == 40) {
+    document.getElementById("status-hire").classList.remove("selected-card");
+    document.getElementById("status-plane").classList.add("selected-card");
+    document.getElementById("status-not-sure").classList.remove("selected-card");
+    
+  }
+  else if (card_number == 41) {
+    document.getElementById("status-hire").classList.remove("selected-card");
+    document.getElementById("status-plane").classList.remove("selected-card");
+    document.getElementById("status-not-sure").classList.add("selected-card");
+    
   }
 
 }
