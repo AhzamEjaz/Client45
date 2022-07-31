@@ -5,7 +5,7 @@ zip_input = document.getElementById("zip-code--input");
 zip_input.addEventListener("keyup", function (event) {
   checkZipSize(event);
 });
-
+current_form_number = 0;
 percentage_bar = document.getElementById('percent-complete');
 percentage = 0;
 
