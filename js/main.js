@@ -72,8 +72,30 @@ function moveToNext(current_form_number) {
     turnOnForm("form-9");
   }
   else if (current_form_number == 9) {
-    // under development
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-10");
   }
+  else if (current_form_number == 10) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-11");
+  }
+  else if (current_form_number == 11) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-12");
+  }
+  else if (current_form_number == 12) {
+    turnOffForm();
+    setPercentBar(current_form_number)
+    unhidePercentBar()
+    turnOnForm("form-13");
+  }
+
 }
 function setPercentBar(current_form_num){
   percentage = ((current_form_num)/forms_ids.length) * 100 ;
@@ -281,6 +303,93 @@ function onCardClick(card_number) {
     document.getElementById("mat-card-6").classList.remove("selected-card");
     document.getElementById("mat-card-1").classList.remove("selected-card");
 
+  }
+
+  else if (card_number == 22) {
+    document.getElementById("yes-4").classList.add("selected-card");
+
+    document.getElementById("no-4").classList.remove("selected-card");
+  } else if (card_number == 23) {
+    document.getElementById("no-4").classList.add("selected-card");
+
+    document.getElementById("yes-4").classList.remove("selected-card");
+  }
+
+  // slopes
+  else if (card_number == 25) {
+    document.getElementById("flat-slope").classList.add("selected-card");
+    document.getElementById("mid-slope").classList.remove("selected-card");
+    document.getElementById("high-slope").classList.remove("selected-card");
+    document.getElementById("not-sure-slope").classList.remove("selected-card");
+  } else if (card_number == 26) {
+    document.getElementById("flat-slope").classList.remove("selected-card");
+    document.getElementById("mid-slope").classList.add("selected-card");
+    document.getElementById("high-slope").classList.remove("selected-card");
+    document.getElementById("not-sure-slope").classList.remove("selected-card");
+  }
+  else if (card_number == 27) {
+    document.getElementById("flat-slope").classList.remove("selected-card");
+    document.getElementById("mid-slope").classList.remove("selected-card");
+    document.getElementById("high-slope").classList.add("selected-card");
+    document.getElementById("not-sure-slope").classList.remove("selected-card");
+  }
+   else if (card_number == 28) {
+    document.getElementById("flat-slope").classList.remove("selected-card");
+    document.getElementById("mid-slope").classList.remove("selected-card");
+    document.getElementById("high-slope").classList.remove("selected-card");
+    document.getElementById("not-sure-slope").classList.add("selected-card");
+  }
+
+  // Quality
+  else if (card_number == 29) {
+    document.getElementById("quality-good").classList.add("selected-card");
+    document.getElementById("quality-better").classList.remove("selected-card");
+    document.getElementById("quality-best").classList.remove("selected-card");
+    document.getElementById("quality-not-sure").classList.remove("selected-card");
+  } else if (card_number == 30) {
+    document.getElementById("quality-good").classList.remove("selected-card");
+    document.getElementById("quality-better").classList.add("selected-card");
+    document.getElementById("quality-best").classList.remove("selected-card");
+    document.getElementById("quality-not-sure").classList.remove("selected-card");
+  }
+  else if (card_number == 31) {
+    document.getElementById("quality-good").classList.remove("selected-card");
+    document.getElementById("quality-better").classList.remove("selected-card");
+    document.getElementById("quality-best").classList.add("selected-card");
+    document.getElementById("quality-not-sure").classList.remove("selected-card");
+  }
+   else if (card_number == 32) {
+    document.getElementById("quality-good").classList.remove("selected-card");
+    document.getElementById("quality-better").classList.remove("selected-card");
+    document.getElementById("quality-best").classList.remove("selected-card");
+    document.getElementById("quality-not-sure").classList.add("selected-card");
+  }
+
+  // completion
+  else if (card_number == 33) {
+    document.getElementById("complete-Immediately").classList.add("selected-card");
+    document.getElementById("complete-3").classList.remove("selected-card");
+    document.getElementById("complete--3").classList.remove("selected-card");
+    document.getElementById("complete-not-sure").classList.remove("selected-card");
+  }
+
+  else if (card_number == 34) {
+    document.getElementById("complete-Immediately").classList.remove("selected-card");
+    document.getElementById("complete-3").classList.add("selected-card");
+    document.getElementById("complete--3").classList.remove("selected-card");
+    document.getElementById("complete-not-sure").classList.remove("selected-card");
+  }
+  else if (card_number == 35) {
+    document.getElementById("complete-Immediately").classList.remove("selected-card");
+    document.getElementById("complete-3").classList.remove("selected-card");
+    document.getElementById("complete--3").classList.add("selected-card");
+    document.getElementById("complete-not-sure").classList.remove("selected-card");
+  }
+  else if (card_number == 36) {
+    document.getElementById("complete-Immediately").classList.remove("selected-card");
+    document.getElementById("complete-3").classList.remove("selected-card");
+    document.getElementById("complete--3").classList.remove("selected-card");
+    document.getElementById("complete-not-sure").classList.add("selected-card");
   }
 
 }
