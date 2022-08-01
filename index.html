@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <!-- local stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/main.css" />
 </head>
 
@@ -46,21 +46,13 @@
             <div class="blueline"></div>
           </div>
 
-          <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-            <p class="text-center" style="text-align: justify">
-              This quote us an estimate, the actual price may differ after
-              at-home inspection
-            </p>
-            <h4>Estimate:$500-$3400</h4>
-          </div>
-
           <div class="tabs mt-2">
             <h5 class="text-center">I am looking for:</h5>
 
             <div class="row mt-2 d-flex justify-content-center">
               <!-- card-1 -->
-              <div onclick="onCardClick(0)" class="col-lg-3 mt-2">
-                <div id="replace-card" class="card card-body">
+              <div onclick="onCardClick(1,1)" class="col-lg-6 mt-2">
+                <div id="card-1-1" class="card card-body">
                   <div class="row">
                     <div class="col-lg-12 col-4">
                       <div class="text-center">
@@ -76,8 +68,8 @@
                 </div>
               </div>
               <!-- card-2 -->
-              <div onclick="onCardClick(1)" class="col-lg-3 mt-2">
-                <div id="repair-card" class="card card-body">
+              <div onclick="onCardClick(2,1)" class="col-lg-6 mt-2">
+                <div id="card-2-1" class="card card-body">
                   <div class="row">
                     <div class="col-lg-12 col-4">
                       <div class="text-center">
@@ -87,23 +79,6 @@
                     <div class="card-txt-div col-lg-12 col-7">
                       <div class="text-center">
                         <h6 class="mt-2">Repair roof</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- card-3 -->
-              <div onclick="onCardClick(2)" class="col-lg-3 mt-2">
-                <div id="construct-card" class="card card-body">
-                  <div class="row">
-                    <div class="col-lg-12 col-4">
-                      <div class="text-center">
-                        <img class="card-img" src="./images/icons/construct.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="card-txt-div col-lg-12 col-7">
-                      <div class="text-center">
-                        <h6 class="mt-2">Install new roof</h6>
                       </div>
                     </div>
                   </div>
@@ -122,341 +97,18 @@
           </div>
 
           <div class="text-center mt-2">
-            <button id="zip-submit" class="btn" onclick="moveToNext(1)" disabled>
+            <button id="zip-submit" type="button" class="btn" onclick="moveToNext(1)" disabled>
               Show Pricing
             </button>
           </div>
         </div>
         <div id="form-2" class="mt-2 container form-group">
-          <div class="row text-center mt-2 d-flex justify-content-center">
-            <div class="col-lg-12 form-group mx-3 mt-3">
-              <input type="text" id="name" class="form-control" placeholder="Enter Name" required />
-            </div>
-            <div class="col-lg-12 form-group mx-3 mt-3">
-              <input type="number" id="phone_number" class="form-control" placeholder="Enter mobile number" required />
-            </div>
-            <div class="col-lg-12 form-group mx-3 mt-3">
-              <input type="email" class="form-control" id="email_address" placeholder="Enter email address" required />
-            </div>
-            <div class="buttons col-lg-6 mx-3 mt-2">
-              <button onclick="moveToPrevious(2)"  type="button" class="col-lg-3 btn btn-primary m-3 mt-2">
-                Back
-              </button>
-
-              <button onclick="moveToNext(2)" id="next-btn" type="button" class="col-lg-3 btn btn-primary m-3 mt-2">
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
-        <div id="form-3" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-
-          <div class="row text-center mt-3">
-            <p class="col-12">Hello Stephan, your average replace cost is</p>
-            <div class="col-5 card p-3 text-center mx-auto">
-              <h4>$1.48-$5.12</h4>
-              <p id="pricing">per Sq. ft</p>
-            </div>
-            <p class="col-12 mt-2">For more accurate estimate you can</p>
-            <div class="row">
-              <!-- card-1 -->
-              <div onclick="onCardClick(3)" class="col-lg-6 mt-2">
-                <div id="cunsultant" class="scr-3-card card card-body">
-                  <div class="row">
-                    <div class="col-lg-12 col-4">
-                      <div class="text-center">
-                        <img class="card-img" src="./images/icons/consult.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="card-txt-div col-lg-12 col-7">
-                      <div class="text-center">
-                        <p class="mt-2">Schedule Consultation</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- card-2 -->
-              <div onclick="onCardClick(4); moveToNext(3);" class="col-lg-6 mt-2">
-                <div id="instant-quote" class="scr-3-card card card-body">
-                  <div class="row">
-                    <div class="col-lg-12 col-4">
-                      <div class="text-center">
-                        <img class="card-img" src="./images/icons/instant.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="card-txt-div col-lg-12 col-7">
-                      <div class="text-center">
-                        <p class="mt-2 m-0">Get an instant online quote</p>
-                        <p class="date-div m-0">(15 question, 2 minutes)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12">
-            <button onclick="moveToPrevious(3)"  type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
-              Back
-            </button>
-          </div>
-        </div>
-        <div id="form-4" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <p class="col-12 mt-2">Is this an Emergency</p>
-          <div class="row">
-            <!-- card-1 -->
-            <div onclick="onCardClick(5); moveToNext(4);" class="col-lg-6 mt-2">
-              <div id="yes-1" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/yes.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2">Yes</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-2 -->
-            <div onclick="onCardClick(6); moveToNext(4);" class="col-lg-6 mt-2">
-              <div id="no-1" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/no.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">No</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <button onclick="moveToPrevious(4)"  type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
-              Back
-            </button>
-          </div>
-        </div>
-        <div id="form-5" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <p class="col-12 mt-2">Is this request covered by an insurance claim?</p>
-          <div class="row">
-            <!-- card-1 -->
-            <div onclick="onCardClick(7); moveToNext(5);" class="col-lg-6 mt-2">
-              <div id="yes-2" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/yes.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2">Yes</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-2 -->
-            <div onclick="onCardClick(8); moveToNext(5);" class="col-lg-6 mt-2">
-              <div id="no-2" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/no.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">No</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <button onclick="moveToPrevious(5)"  type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
-              Back
-            </button>
-          </div>
-        </div>
-        <div id="form-6" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <p class="col-12 mt-2">I know the size of my roof:</p>
-          <div class="row">
-            <!-- card-1 -->
-            <div onclick="onCardClick(9); moveToNext(6);" class="col-lg-6 mt-2">
-              <div id="yes-3" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/yes.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2">Yes</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-2 -->
-            <div onclick="onCardClick(10); moveToNext(6);" class="col-lg-6 mt-2">
-              <div id="no-3" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/no.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">No</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <button onclick="moveToPrevious(6)"  type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
-              Back
-            </button>
-          </div>
-        </div>
-        <div id="form-7" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <p class="col-12 mt-2">For more accurate estimate you can</p>
-          <div class="row">
-            <!-- card-1 -->
-            <div onclick="onCardClick(11); moveToNext(7)" class="col-lg-3 mt-2">
-              <div id="est-1" class="roof-sizing card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/size-roof.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-1 m-0">&lt; 1,000 Sq. Ft</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-2 -->
-            <div onclick="onCardClick(12); moveToNext(7)" class="col-lg-3 mt-2">
-              <div id="est-2" class="roof-sizing card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/size-roof.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-1 m-0">1,000-2,000 Sq. Ft.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-3 -->
-            <div onclick="onCardClick(13); moveToNext(7)" class="col-lg-3 mt-2">
-              <div id="est-3" class="roof-sizing card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/size-roof.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-1 m-0">2,000-3,000 Sq. Ft</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-4 -->
-            <div onclick="onCardClick(14); moveToNext(7)" class="col-lg-3 mt-2">
-              <div id="est-4" class="roof-sizing card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/size-roof.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-1 m-0">3,000+ Sq. Ft.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-12">
-            <button onclick="moveToPrevious(7)"  type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
-              Back
-            </button>
-          </div>
-        </div>
-        <div id="form-8" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-            <p class="text-center" style="text-align: justify">
-              This quote is an estimate, the actual cost may change after the inspection is complete.
-            </p>
-            <h4>Estimate: $1,480-$10,240</h4>
-          </div>
-          <p class="col-12 mt-2 text-center">The roofing material i want is:</p>
+          <p class="col-12 mt-2 text-center">The roofing material I want is:</p>
 
           <div class="row text-center">
             <!-- card-1 -->
-            <div onclick="onCardClick(15); moveToNext(8)" class="col-6 col-sm-4 mt-2">
-              <div id="mat-card-1" class="materials card card-body">
+            <div onclick="onCardClick(1,2); moveToNext(2)" class="col-6 mt-2">
+              <div id="card-1-2" class="materials card card-body">
                 <div class="row">
 
                   <div class="card-txt-div col-12">
@@ -464,72 +116,14 @@
                       <p class="m-0">Asphalt</p>
                     </div>
                   </div>
-                  <div class="material-img-div m-0 col-12" style="background-image: url('./images/tiles/asphalt.jpg');"></div>
-                </div>
-              </div>
-            </div>
-            <!-- card-2 -->
-            <div onclick="onCardClick(16); moveToNext(8)" class="col-6 col-sm-4 mt-2">
-              <div id="mat-card-2" class="materials card card-body">
-                <div class="row">
-
-                  <div class="card-txt-div col-12">
-                    <div class="text-center">
-                      <p class="m-0">Slate</p>
-                    </div>
-                  </div>
-                  <div class="material-img-div col-12" style="background-image: url('./images/tiles/slate.jpg');"></div>
-                </div>
-              </div>
-            </div>
-            <!-- card-3 -->
-            <div onclick="onCardClick(17); moveToNext(8)" class="col-6 col-sm-4 mt-2">
-              <div id="mat-card-3" class="materials card card-body">
-                <div class="row">
-
-                  <div class="card-txt-div col-12">
-                    <div class="text-center">
-                      <p class="m-0">Wood</p>
-                    </div>
-                  </div>
-                  <div class="material-img-div col-12" style="background-image: url('./images/tiles/wood.jpg');">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-4 -->
-            <div onclick="onCardClick(18); moveToNext(8)" class="col-6 col-sm-4 mt-2">
-              <div id="mat-card-4" class="materials card card-body">
-                <div class="row">
-
-                  <div class="card-txt-div col-12">
-                    <div class="text-center">
-                      <p class="m-0">Metal</p>
-                    </div>
-                  </div>
-                  <div class="material-img-div col-12" style="background-image: url('./images/tiles/metal.jpg');">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-5 -->
-            <div onclick="onCardClick(19); moveToNext(8)" class="col-6 col-sm-4 mt-2">
-              <div id="mat-card-5" class="materials card card-body">
-                <div class="row">
-
-                  <div class="card-txt-div col-12">
-                    <div class="text-center">
-                      <p class="m-0">Tile</p>
-                    </div>
-                  </div>
-                  <div class="material-img-div col-12" style="background-image: url('./images/tiles/tile.jpg');">
+                  <div class="material-img-div m-0 col-12" style="background-image: url('./images/tiles/asphalt.jpg');">
                   </div>
                 </div>
               </div>
             </div>
             <!-- card-6 -->
-            <div onclick="onCardClick(20); moveToNext(8)" class="col-6 col-sm-4 mt-2">
-              <div id="mat-card-6" class="materials card card-body">
+            <div onclick="onCardClick(2,2); moveToNext(2)" class="col-6 mt-2">
+              <div id="card-2-2" class="materials card card-body">
                 <div class="row">
 
                   <div class="card-txt-div col-12">
@@ -542,108 +136,105 @@
                 </div>
               </div>
             </div>
-            <!-- card-7 -->
-            <div onclick="onCardClick(21); moveToNext(8)" class="col-12 mt-2">
-              <div id="mat-card-7" class="materials card card-body">
-                <div class="row">
-
-                  <div class="col-12">
-                    <div class="text-center m-0">
-                      <p class="m-0">Not Sure</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
 
           <div class="col-12">
-            <button onclick="moveToPrevious(8)"  type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
+            <button onclick="moveToPrevious(2)" type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
               Back
             </button>
           </div>
         </div>
-        <div id="form-9" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-            <p class="text-center" style="text-align: justify">
-              This quote is an estimate, the actual cost may change after the inspection is complete.
-            </p>
-            <h4>Estimate: $1,480-$10,240</h4>
-          </div>
-
-          <p class="col-12 mt-2">Are you aware of any leaks or damages to the roof?</p>
+        <div id="form-3" class="mt-2 container form-group">
+          <h2 class="col-12 mt-2">What is the size of your house?</h2>
+          <p class="col-12 mt-2">The roof size will be auto-calculated based on your home size.</p>
+      
           <div class="row">
             <!-- card-1 -->
-            <div onclick="onCardClick(22); moveToNext(9);" class="col-lg-6 mt-2">
-              <div id="yes-4" class="scr-3-card card card-body">
+            <div onclick="onCardClick(1,3); moveToNext(3)" class="col-lg-3 mt-2">
+              <div id="card-1-3" class="roof-sizing card card-body">
                 <div class="row">
-                  <div class="col-lg-12 col-4">
+                  <div class="col-lg-12 col-3">
                     <div class="text-center">
-                      <img class="card-img" src="./images/icons/yes.png" alt="" />
+                      <img class="card-img" src="./images/icons/size-roof.png" alt="" />
                     </div>
                   </div>
-                  <div class="card-txt-div col-lg-12 col-7">
+                  <div class="card-txt-div col-lg-12 col-6">
                     <div class="text-center">
-                      <p class="mt-2">Yes</p>
+                      <p class="mt-1 m-0">&lt; 1,000 Sq. Ft</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- card-2 -->
-            <div onclick="onCardClick(23); moveToNext(9);" class="col-lg-6 mt-2">
-              <div id="no-4" class="scr-3-card card card-body">
+            <div onclick="onCardClick(2,3); moveToNext(3)" class="col-lg-3 mt-2">
+              <div id="card-2-3" class="roof-sizing card card-body">
                 <div class="row">
-                  <div class="col-lg-12 col-4">
+                  <div class="col-lg-12 col-3">
                     <div class="text-center">
-                      <img class="card-img" src="./images/icons/no.png" alt="" />
+                      <img class="card-img" src="./images/icons/size-roof.png" alt="" />
                     </div>
                   </div>
-                  <div class="card-txt-div col-lg-12 col-7">
+                  <div class="card-txt-div col-lg-12 col-6">
                     <div class="text-center">
-                      <p class="mt-2 m-0">No</p>
+                      <p class="mt-1 m-0">1,000-2,000 Sq. Ft.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <button onclick="moveToPrevious(9)"  type="button"
-                class="col-4 col-lg-2 btn btn-primary mt-3">
-                Back
-              </button>
+            <!-- card-3 -->
+            <div onclick="onCardClick(3,3); moveToNext(3)" class="col-lg-3 mt-2">
+              <div id="card-3-3" class="roof-sizing card card-body">
+                <div class="row">
+                  <div class="col-lg-12 col-3">
+                    <div class="text-center">
+                      <img class="card-img" src="./images/icons/size-roof.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="card-txt-div col-lg-12 col-6">
+                    <div class="text-center">
+                      <p class="mt-1 m-0">2,000-3,000 Sq. Ft</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- card-4 -->
+            <div onclick="onCardClick(4,3); moveToNext(3)" class="col-lg-3 mt-2">
+              <div id="card-4-3" class="roof-sizing card card-body">
+                <div class="row">
+                  <div class="col-lg-12 col-3">
+                    <div class="text-center">
+                      <img class="card-img" src="./images/icons/size-roof.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="card-txt-div col-lg-12 col-6">
+                    <div class="text-center">
+                      <p class="mt-1 m-0">3,000+ Sq. Ft.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
           </div>
-
+          <div class="col-12">
+            <button onclick="moveToPrevious(3)"  type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
+              Back
+            </button>
+          </div>
         </div>
-        <div id="form-10" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-            <p class="text-center" style="text-align: justify">
-              This quote is an estimate, the actual cost may change after the inspection is complete.
-            </p>
-            <h4>Estimate: $1,480-$10,240</h4>
-          </div>
-
-          <p class="col-12 mt-2">Pitch of my roof looks like:</p>
+        <div id="form-4" class="mt-2 container form-group">
+          <p class="col-12 mt-2">How steep is my roof?</p>
           <div class="row">
             <!-- card-1 -->
-            <div onclick="onCardClick(25); moveToNext(10);" class="col-lg-4 mt-2">
-              <div id="flat-slope" class="scr-3-card card card-body">
+            <div onclick="onCardClick(1,4); moveToNext(4);" class="col-lg-4 mt-2">
+              <div id="card-1-4" class="scr-3-card card card-body">
                 <div class="row">
                   <div class="card-txt-div col-lg-12 col-7">
                     <div class="text-center">
-                      <p class="mt-2 m-0">Flatter slope <span style="font-size: 0.7rem;">(&lt;3/12)</span></p>
+                      <p class="mt-2 m-0">Flatter slope <span style="font-size: 0.7rem;"><br>Walkable<br>(&lt;3/12)</span></p>
                     </div>
                   </div>
 
@@ -656,12 +247,12 @@
               </div>
             </div>
             <!-- card-2 -->
-            <div onclick="onCardClick(26); moveToNext(10);" class="col-lg-4 mt-2">
-              <div id="mid-slope" class="scr-3-card card card-body">
+            <div onclick="onCardClick(2,4); moveToNext(4);" class="col-lg-4 mt-2">
+              <div id="card-2-4" class="scr-3-card card card-body">
                 <div class="row">
                   <div class="card-txt-div col-lg-12 col-7">
                     <div class="text-center">
-                      <p class="mt-2 m-0">Mid Slope <span style="font-size: 0.7rem;">(4/12-6/12)</span></p>
+                      <p class="mt-2 m-0">Mid Slope <span style="font-size: 0.7rem;"><br>Walkable<br>(4/12-6/12)</span></p>
                     </div>
                   </div>
                   <div class="col-lg-12 col-4">
@@ -673,12 +264,12 @@
               </div>
             </div>
             <!-- card-3 -->
-            <div onclick="onCardClick(27); moveToNext(10);" class="col-lg-4 mt-2">
-              <div id="high-slope" class="scr-3-card card card-body">
+            <div onclick="onCardClick(3,4); moveToNext(4);" class="col-lg-4 mt-2">
+              <div id="card-3-4" class="scr-3-card card card-body">
                 <div class="row">
                   <div class="card-txt-div col-lg-12 col-7">
                     <div class="text-center">
-                      <p class="mt-2 m-0">High Slope <span style="font-size: 0.7rem;">(7/12+)</span></p>
+                      <p class="mt-2 m-0">High Slope <span style="font-size: 0.7rem;"><br>Too steep to walk on<br>(7/12+)</span></p>
                     </div>
                   </div>
                   <div class="col-lg-12 col-4">
@@ -690,21 +281,8 @@
               </div>
             </div>
 
-            <!-- card-4 -->
-            <div onclick="onCardClick(28); moveToNext(10);" class="col-12 mt-2">
-              <div id="not-sure-slope" class="card card-body">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="text-center">
-                      <p class="m-0">Not Sure</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="col-12">
-              <button onclick="moveToPrevious(10)"  type="button"
+              <button onclick="moveToPrevious(4)"  type="button"
                 class="col-4 col-lg-2 btn btn-primary mt-3">
                 Back
               </button>
@@ -714,100 +292,66 @@
 
 
         </div>
-        <div id="form-11" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-            <p class="text-center" style="text-align: justify">
-              This quote is an estimate, the actual cost may change after the inspection is complete.
-            </p>
-            <h4>Estimate: $1,480-$10,240</h4>
-          </div>
-
-          <p class="col-12 mt-2">The material quality I prefer:</p>
+        <div id="form-5" class="mt-2 container form-group">
+          <p class="col-12 mt-2">My home is:</p>
           <div class="row">
             <!-- card-1 -->
-            <div onclick="onCardClick(29); moveToNext(11);" class="col-lg-4 mt-2">
-              <div id="quality-good" class="scr-3-card card card-body">
+            <div onclick="onCardClick(1,5); moveToNext(5);" class="col-lg-4 mt-2">
+              <div id="card-1-5" class="scr-3-card card card-body">
                 <div class="row">
                   <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">Good<span style="font-size: 0.7rem;">
-                          <div class="review-stars">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                          </div>
-
-                        </span></p>
+                    <div class="text-center row">
+                      <div class="col-lg-12 col-4">
+                        <div class="text-center">
+                          <img class="story-img card-img" src="./images/icons/story-1.png" alt="" />
+                        </div>
+                      </div>
+                      <p class="col-lg-12 col-7 mt-2 m-0">1 Story</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- card-2 -->
-            <div onclick="onCardClick(30); moveToNext(11);" class="col-lg-4 mt-2">
-              <div id="quality-better" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">Better<span style="font-size: 0.7rem;">
-
-                          <div class="review-stars">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
+            <div onclick="onCardClick(2,5); moveToNext(5);" class="col-lg-4 mt-2">
+                <div id="card-2-5" class="scr-3-card card card-body">
+                  <div class="row">
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center row">
+                        <div class="col-lg-12 col-4">
+                          <div class="text-center">
+                            <img class="story-img card-img" src="./images/icons/story-2.png" alt="" />
                           </div>
-                        </span></p>
+                        </div>
+                        <p class="col-lg-12 col-7 mt-2 m-0">2 Story</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
             <!-- card-3 -->
-            <div onclick="onCardClick(31); moveToNext(11);" class="col-lg-4 mt-2">
-              <div id="quality-best" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">Best<span style="font-size: 0.7rem;">
-                          <div class="review-stars">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
+            <div onclick="onCardClick(3,5); moveToNext(5);" class="col-lg-4 mt-2">
+                <div id="card-3-5" class="scr-3-card card card-body">
+                  <div class="row">
+                    <div class="card-txt-div col-lg-12 col-7">
+                      <div class="text-center row">
+                        <div class="col-lg-12 col-4 col-4">
+                          <div class="text-center">
+                            <img class="story-img card-img" src="./images/icons/story-3.png" alt="" />
                           </div>
+                        </div>
+                        <p class="col-lg-12 col-7 mt-2 m-0">3 Story</p>
 
-                        </span></p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
+    
             <!-- card-4 -->
-            <div onclick="onCardClick(32); moveToNext(11);" class="col-12 mt-2">
-              <div id="quality-not-sure" class="card card-body">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="text-center">
-                      <p class="m-0">Not Sure</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div class="col-12">
-              <button onclick="moveToPrevious(11)"  type="button"
+              <button onclick="moveToPrevious(5)"  type="button"
                 class="col-4 col-lg-2 btn btn-primary mt-3">
                 Back
               </button>
@@ -817,265 +361,134 @@
 
 
         </div>
-        <div id="form-12" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-            <p class="text-center" style="text-align: justify">
-              This quote is an estimate, the actual cost may change after the inspection is complete.
-            </p>
-            <h4>Estimate: $1,480-$10,240</h4>
-          </div>
-
-          <p class="col-12 mt-2">I am looking at getting the job completed:</p>
-          <div class="row">
-            <!-- card-1 -->
-            <div onclick="onCardClick(33); moveToNext(12);" class="col-lg-4 mt-2">
-              <div id="complete-Immediately" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">Immediately</p>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/calender-2.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div id="form-6" class="mt-2 container form-group">
+          <div class="row text-center mt-2 d-flex justify-content-center">
+            <div class="col-lg-12 form-group mx-3 mt-3">
+              <input type="text" id="name" class="form-control" placeholder="Enter Name" required />
             </div>
-            <!-- card-2 -->
-            <div onclick="onCardClick(34); moveToNext(12);" class="col-lg-4 mt-2">
-              <div id="complete-3" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">1-3 Months</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/calender-1.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-12 form-group mx-3 mt-3">
+              <input type="number" id="phone_number" class="form-control" placeholder="Enter mobile number" required />
             </div>
-            <!-- card-3 -->
-            <div onclick="onCardClick(35); moveToNext(12);" class="col-lg-4 mt-2">
-              <div id="complete--3" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">3+ Months</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/calender-3.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-12 form-group mx-3 mt-3">
+              <input type="email" class="form-control" id="email_address" placeholder="Enter email address" required />
             </div>
-
-            <!-- card-4 -->
-            <div onclick="onCardClick(36); moveToNext(12);" class="col-12 mt-2">
-              <div id="complete-not-sure" class="card card-body">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="text-center">
-                      <p class="m-0">Not Sure</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <button onclick="moveToPrevious(12)"  type="button"
-                class="col-4 col-lg-2 btn btn-primary mt-3">
+            <div class="buttons col-lg-6 mx-3 mt-2">
+              <button onclick="moveToPrevious(6)"  type="button" class="col-lg-3 btn btn-primary m-2 mt-2">
                 Back
               </button>
+
+              <button onclick="moveToNext(6)" id="next-btn" type="button" class="col-lg-7 btn btn-primary m-2 mt-2">
+                Display my estimate
+              </button>
             </div>
-
           </div>
-
-
         </div>
 
-        <div id="form-13" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
+        <div id="form-7">
+          <div class="col-12 text-center headings-div mt-3 p-2">
+            <p class="col-12">This quote is an estimate, the actual cost may change after the inspection is complete.</p>
+            <h1>Estimate: $1,480-$10,240</h1>
           </div>
-          <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-            <p class="text-center" style="text-align: justify">
-              This quote is an estimate, the actual cost may change after the inspection is complete.
-            </p>
-            <h4>Estimate: $1,480-$10,240</h4>
+          <div class="date-label-div col-12 text-center mt-2">
+            <h3 class="col-12">Schedule a free inspection Date</h3>
+            <p class="col-12">Please pick a date and time when all involved with this purchase can be presented:</p>
           </div>
-
-          <p class="col-12 mt-2">I am the owner or authurized to make property changes:</p>
-          <div class="row">
-            <!-- card-1 -->
-            <div onclick="onCardClick(37); moveToNext(13)" class="col-lg-6 mt-2">
-              <div id="yes-5" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/yes.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2">Yes</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-2 -->
-            <div onclick="onCardClick(38); moveToNext(13)" class="col-lg-6 mt-2">
-              <div id="no-5" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/no.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">No</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="date-input container">
+          <input class="d-block col-12 col-lg-4 mx-auto" id="date-input" type="date">
           </div>
-          <div class="col-12">
-            <button onclick="moveToPrevious(13)"  type="button"
-              class="col-4 col-lg-2 btn btn-primary mt-3">
+          <div class="col-12 d-flex justify-content-between">
+            <button onclick="moveToPrevious(7)" type="button" class="col-4 col-lg-2 btn btn-primary mt-3" >
               Back
             </button>
-          </div>
-        </div>
-        <div id="form-14" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-            <p class="text-center" style="text-align: justify">
-              This quote is an estimate, the actual cost may change after the inspection is complete.
-            </p>
-            <h4 style="font-size: 1.5rem;">Estimate: $1,480-$10,240</h4>
-            <h4  style="font-size: 1.5rem;">Financed: $95/mo-$248/mo</h4>
-          </div>
 
-          <p class="col-12 mt-2">Status of my project is:</p>
-          <div class="row">
-            <!-- card-1 -->
-            <div onclick="onCardClick(39); moveToNext(14)" class="col-lg-6 mt-2">
-              <div id="status-hire" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2">Ready to hire</p>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/hire.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-2 -->
-            <div onclick="onCardClick(40); moveToNext(14)" class="col-lg-6 mt-2">
-              <div id="status-plane" class="scr-3-card card card-body">
-                <div class="row">
-                  <div class="card-txt-div col-lg-12 col-7">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">Planning and budgeting</p>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-12 col-4">
-                    <div class="text-center">
-                      <img class="card-img" src="./images/icons/planing.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card-3 -->
-            <div onclick="onCardClick(41); moveToNext(14)" class="col-12 mt-2">
-              <div id="status-not-sure" class="card card-body">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="text-center">
-                      <p class="mt-2 m-0">Not sure</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-12">
-            <button onclick="moveToPrevious(14)"  type="button"
-              class="col-4 col-lg-2 btn btn-primary mt-3">
-              Back
+            <button id="next-btn-date" onclick="moveToNext(7)" type="button" class="col-4 col-lg-2 btn btn-primary mt-3" disabled>
+              Next
             </button>
           </div>
-        </div>
-        <div id="form-15" class="mt-2 container form-group">
-          <div class="col-12 text-center">
-            <h2 class="name-head col-12">Stephan Craven</h2>
-            <div class="blueline mb-0"></div>
-            <p class="date-div col-12 m-0">Tuesday, November 30, 2021</p>
-          </div>
-          <div class="headings-div mx-auto col-sm-12 col-lg-9 text-center p-2">
-            <p class="text-center" style="text-align: justify">
-              This quote is an estimate, the actual cost may change after the inspection is complete.
-            </p>
-            <h4 style="font-size: 1.5rem;">Estimate: $1,480-$10,240</h4>
-            <h4  style="font-size: 1.5rem;">Financed: $95/mo-$248/mo</h4>
-          </div>
 
-          <p>Form under development</p>
-          <div class="col-12">
-            <button onclick="moveToPrevious(15)"  type="button"
-              class="col-4 col-lg-2 btn btn-primary mt-3">
+        </div>
+
+        <div id="form-8">
+          <div class="col-12 text-center">
+            <p>My selected date:</p>
+            <p><span><i class="fa fa-calendar" aria-hidden="true"></i>
+            </span><span id="date-output"></span></p>
+          </div>
+          <div class="time-selection-parent-container container text-center">
+            <p class="col-12">Please select time</p>
+            <div class="row">
+              <div class="col-lg-4">
+                <p>Morning</p>
+                <div id="card-1-8" onclick="onCardClick(1,8)" class="time-card card mt-2">
+                  <p class="text-center">8:00am-10:00am</p>
+                </div>
+                <div id="card-2-8" onclick="onCardClick(2,8)" class="time-card card mt-2">
+                  <p class="text-center">10:00am-12:00am</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <p>Afternoon</p>
+                <div id="card-3-8" onclick="onCardClick(3,8)" class="time-card card mt-2">
+                  <p class="text-center">12:00am-2:00am</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <p>Evening</p>
+                <div id="card-4-8" onclick="onCardClick(4,8)" class="time-card card mt-2">
+                  <p class="text-center">4:00am-6:00am</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-12 d-flex justify-content-between">
+            <button onclick="moveToPrevious(8)" type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
               Back
             </button>
-          </div>
+            <button onclick="moveToNext(8)" type="button" class="col-6 btn btn-primary mt-3">
+              Schedule my free consultation
+            </button>
+
+            </div>
         </div>
 
+        <div id="form-9">
+
+          <h3 class="headings-div">Contact information and location</h3>
+          <h4>Contact information</h4>
+          <h5>Stephen Craven</h5>
+
+          <div class="information-input-fields">
+            <p>Service information</p>
+          </div>
+          <p>Further form is under development</p>
+          <button onclick="moveToPrevious(9)" type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
+            Back
+          </button>
+        </div>
+
+        <div id="form-10">
+          
+          <button onclick="moveToPrevious(10)" type="button" class="col-4 col-lg-2 btn btn-primary mt-3">
+            Back
+          </button>
+        </div>
+
+      </div>
+      <div class="review-container mt-2 mx-auto d-flex justify-content-evenly">
+        <p id="review">5.0</p>
+        <div class="review-stars">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+        <p>27 Google Reviews</p>
+      </div>
 
     </form>
-    <div class="review-container mt-2 mx-auto d-flex justify-content-evenly">
-      <p id="review">5.0</p>
-      <div class="review-stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-      </div>
-      <p>27 Google Reviews</p>
-    </div>
+
   </div>
   <script src="./js/bootstrap.bundle.js"></script>
   <script src="./js/main.js"></script>
