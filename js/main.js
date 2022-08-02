@@ -8,6 +8,8 @@ email = document.getElementById("email_address");
 
 address_1 = document.getElementById("address-1");
 address_2 = document.getElementById("address-2");
+city = document.getElementById("city");
+state = document.getElementById("state");
 
 
 // name_field.addEventListener("emptied", infoDisable);
@@ -42,14 +44,16 @@ function addressFormEventLisner(){
 
   address_1.addEventListener("focus", addressEnable);
   address_2.addEventListener("focus", addressEnable);
+  city.addEventListener("focus", addressEnable);
+  state.addEventListener("focus", addressEnable);
 
-  address_1.addEventListener("keyup", addressEnable);
-  address_2.addEventListener("keyup", addressEnable);
+  city.addEventListener("keyup", addressEnable);
+  state.addEventListener("keyup", addressEnable);
 
 }
 
 function addressEnable(){
-  if (address_1.value && address_2.value) {
+  if (address_1.value && address_2.value && city.value && state.value) {
     document.getElementById("d-in").disabled = false;
   }
   else {
