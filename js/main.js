@@ -1,20 +1,11 @@
 forms_ids = document.getElementById("forms-container").children;
 card_click_select = [0, 0, 0];
 
-
-name_field = document.getElementById("name");
-phone = document.getElementById("phone_number");
 email = document.getElementById("email_address");
-
-address_1 = document.getElementById("address-1");
-address_2 = document.getElementById("address-2");
-city = document.getElementById("city");
-state = document.getElementById("state");
 
 
 // name_field.addEventListener("emptied", infoDisable);
 infoFormEventListners();
-addressFormEventLisner()
 document.getElementById('date-input').addEventListener('change', function () {
   document.getElementById('date-output').innerHTML = document.getElementById('date-input').value;
   document.getElementById('date-output-1').innerHTML = document.getElementById('date-input').value;
@@ -29,95 +20,19 @@ current_form_number = 0;
 
 function infoFormEventListners() {
 
-
-  name_field.addEventListener("focus", infoEnable);
-  phone.addEventListener("focus", infoEnable);
   email.addEventListener("focus", infoEnable);
 
-  name_field.addEventListener("keyup", infoEnable);
-  phone.addEventListener("keyup", infoEnable);
   email.addEventListener("keyup", infoEnable);
 
-  name_field.addEventListener("touchstart", infoEnable);
-  phone.addEventListener("touchstart", infoEnable);
   email.addEventListener("touchstart", infoEnable);
 
 
 }
 
-function addressFormEventLisner(){
-
-  address_1.addEventListener("focus", addressEnable);
-  address_2.addEventListener("focus", addressEnable);
-  city.addEventListener("focus", addressEnable);
-  state.addEventListener("focus", addressEnable);
-
-  address_1.addEventListener("keyup", addressEnable);
-  address_2.addEventListener("keyup", addressEnable);
-  city.addEventListener("keyup", addressEnable);
-  state.addEventListener("keyup", addressEnable);
-
-  address_1.addEventListener("touchstart", addressEnable);
-  address_2.addEventListener("touchstart", addressEnable);
-  city.addEventListener("touchstart", addressEnable);
-  state.addEventListener("touchstart", addressEnable);
-
-
-}
-
-function addressEnable(){
-  if(!address_1.value){
-    address_1.style.borderColor = "red";
-    address_2.style.borderColor = "#525865";
-    city.style.borderColor = "#525865";
-    state.style.borderColor = "#525865";
-  }
-  else if(!address_2.value){
-    address_1.style.borderColor = "#525865";
-    address_2.style.borderColor = "red";
-    city.style.borderColor = "#525865";
-    state.style.borderColor = "#525865";
-
-  }
-  else if(!city.value){
-    address_1.style.borderColor = "#525865";
-    address_2.style.borderColor = "#525865";
-    city.style.borderColor = "red";
-    state.style.borderColor = "#525865";
-  }
-  else if(!state.value){
-    address_1.style.borderColor = "#525865";
-    address_2.style.borderColor = "#525865";
-    city.style.borderColor = "#525865";
-    state.style.borderColor = "red";
-  }else{
-    city.style.borderColor = "#525865";
-
-  }
-
-  if (address_1.value && address_2.value && city.value && state.value) {
-    document.getElementById("d-in").disabled = false;
-  }
-  else {
-    document.getElementById("d-in").disabled = true;
-  }
-}
 function infoEnable() {
 
-  if(!name_field.value){
-    name_field.style.borderColor = "red";
-    phone.style.borderColor = "#525865";
-    email.style.borderColor = "#525865";
-  }
-  else if(!phone.value){
-    name_field.style.borderColor = "#525865";
-    phone.style.borderColor = "red";
-    email.style.borderColor = "#525865";
 
-  }
-  else if(!email.value){
-    name_field.style.borderColor = "#525865";
-    phone.style.borderColor = "#525865";
+  if(!email.value){
     email.style.borderColor = "red";
   }
   else {
@@ -125,7 +40,7 @@ function infoEnable() {
     
   }
 
-  if (name_field.value && phone.value && email.value) {
+  if (email.value) {
     document.getElementById("d-me").disabled = false;
   }
   else {
