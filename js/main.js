@@ -38,6 +38,11 @@ function infoFormEventListners() {
   phone.addEventListener("keyup", infoEnable);
   email.addEventListener("keyup", infoEnable);
 
+  name_field.addEventListener("touchstart", infoEnable);
+  phone.addEventListener("touchstart", infoEnable);
+  email.addEventListener("touchstart", infoEnable);
+
+
 }
 
 function addressFormEventLisner(){
@@ -47,8 +52,16 @@ function addressFormEventLisner(){
   city.addEventListener("focus", addressEnable);
   state.addEventListener("focus", addressEnable);
 
+  address_1.addEventListener("keyup", addressEnable);
+  address_2.addEventListener("keyup", addressEnable);
   city.addEventListener("keyup", addressEnable);
   state.addEventListener("keyup", addressEnable);
+
+  address_1.addEventListener("touchstart", addressEnable);
+  address_2.addEventListener("touchstart", addressEnable);
+  city.addEventListener("touchstart", addressEnable);
+  state.addEventListener("touchstart", addressEnable);
+
 
 }
 
