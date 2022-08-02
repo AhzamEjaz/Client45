@@ -308,3 +308,22 @@ input,.input-style {
     -o-transition: .18s ease-out;
     transition: .18s ease-out;
   }
+
+  .txt-background-1{
+    background-color: #52586531;
+    border-radius: 5px;
+    min-height: 2rem;
+    margin: 5px;
+  }
+
+  .txt-underline{
+    text-decoration: underline;
+  }
+  .txt-background-2{
+    background-color: #54fa139a;
+    border-radius: 5px;
+    padding-top: 5px;
+    min-height: 2rem;
+    margin: 5px;
+
+}

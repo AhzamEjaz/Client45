@@ -87,6 +87,19 @@ function getListOfIDs(form_id){
   return card_id_list;
 }
 
-function getAllFormIds(){
+function timeSelect(time_select_id){
+  if(time_select_id == 1){
+    document.getElementById("time-output").innerHTML = "8:00 am-10:00 am";
+  }
+  else if(time_select_id == 2){
+    document.getElementById("time-output").innerHTML = "10:00 am-12:00 pm";
+  }
+  else if(time_select_id == 3){
+    document.getElementById("time-output").innerHTML = "12:00 pm-2:00 pm";
+  }
+  else if(time_select_id == 4){
+    document.getElementById("time-output").innerHTML = "4:00 pm-6:00 pm";
+  }
 
+  document.getElementById("schedule-cons").disabled = false;
 }
