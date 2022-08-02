@@ -3,6 +3,7 @@ card_click_select = [0, 0, 0];
 
 document.getElementById('date-input').addEventListener('change',function(){
   document.getElementById('date-output').innerHTML = document.getElementById('date-input').value;
+  document.getElementById('date-output-1').innerHTML = document.getElementById('date-input').value;
   document.getElementById('next-btn-date').disabled = false;
 })
 zip_input = document.getElementById("zip-code--input");
