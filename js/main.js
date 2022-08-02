@@ -12,8 +12,6 @@ zip_input.addEventListener("keyup", function (event) {
 });
 
 current_form_number = 0;
-percentage_bar = document.getElementById('percent-complete');
-percentage = 0;
 
 function checkZipSize(event) {
   if (zip_input.value.length >= 5) {
@@ -22,27 +20,12 @@ function checkZipSize(event) {
     document.getElementById("zip-submit").disabled = true;
   }
 }
+
 function moveToNext(current_form_number) {
 
   form_number_to_turn_on = "form-" + (current_form_number+1).toString() ;
   turnOffForm();
   turnOnForm(form_number_to_turn_on);
-  if(current_form_number == 3 || current_form_number == 2){
-  hidePercentBar();
-  }
-}
-
-function setPercentBar(current_form_num){
-  percentage = ((current_form_num)/forms_ids.length) * 100 ;
-  percentage_bar.innerHTML = percentage.toFixed(2) + "%";
-  percentage_bar.style.width = percentage.toString() + "%";
-}
-
-function unhidePercentBar(){
-  document.getElementById('completion-bar').style.display = 'flex';
-}
-function hidePercentBar(){
-  document.getElementById('completion-bar').style.display = 'none';
 }
 
 
@@ -51,24 +34,59 @@ function moveToPrevious(current_form_number) {
     form_number_to_turn_on = "form-" + (current_form_number-1).toString() ;
     turnOffForm();
     turnOnForm(form_number_to_turn_on);
-    if(current_form_number == 3 || current_form_number == 2){
-    hidePercentBar();
-    }
 }
 
 // form turn on/off
 function turnOffForm() {
-  for (i = 0; i < forms_ids.length; i++) forms_ids[i].style.display = "none";
+  for (i = 0; i < forms_ids.length; i++){
+    forms_ids[i].style.display = "none";
+  }
 }
 
 function turnOnForm(form_id) {
   forms_ids[form_id].style.display = "block";
-  console.log(form_id);
 }
 
 function onCardClick(card_number, form_number) {
   // document.getElementById("replace-card").classList.add("selected-card");
   card_id = "card-"+card_number.toString()+"-"+form_number.toString();
-  console.log(card_id);
   document.getElementById(card_id).classList.add("selected-card");
+  removeSelectedCard(card_number, form_number);
+}
+
+function removeSelectedCard(card_number, form_number){
+  card_id_list = getListOfIDs(form_number);
+  current_card_id = "card-"+card_number.toString()+"-"+form_number.toString();
+  pointer_id = "";
+  for(i = 0; i < card_id_list.length; i++){
+    pointer_id = "";
+    pointer_id = card_id_list[i];
+
+    if(pointer_id == current_card_id){
+      // ignore
+    }else{
+      document.getElementById(pointer_id).classList.remove("selected-card");
+    }
+  }
+}
+
+function getListOfIDs(form_id){
+  card_id_list = [];
+  card_id = "";
+  card_id_obj = "";
+  for(i=1; i<10; i++){
+    card_id = "card-"+i.toString()+"-"+form_id.toString();
+    card_id_obj = document.getElementById(card_id);
+    if(card_id_obj){
+      card_id_list.push(card_id);
+    }
+    else{
+      break;
+    }
+  }
+  return card_id_list;
+}
+
+function getAllFormIds(){
+
 }
